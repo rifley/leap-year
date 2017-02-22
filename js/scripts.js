@@ -20,7 +20,7 @@ $(function(){
     event.preventDefault();
     // Get input and parse as an input
     var input = parseInt($("#inputOne").val());
-    
+
     console.log(input);
     if(isNaN(input)){
       alert("Please enter a valid number.");
@@ -31,6 +31,14 @@ $(function(){
     }
 
     console.log(leapYear);
+
+    $("#input").hide();
+    $("#output").show();
+    if(leapYear === true){
+      $("#outBox").text("This is a leap year.");
+    } else{
+      $("#outBox").text("This is a NOT leap year.");
+    }
 
   });
 });
